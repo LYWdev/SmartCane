@@ -157,10 +157,10 @@ def run(
                 #     print('accuracy', d[4])
                 #     print('class',    d[5])
 
-                threshold_size = 100000 * 1.60
+                threshold_size = 100000 * 1.10
                 for d in det:   # get last elements in c of det array
-                    if (d[2] * d[3] > threshold_size):
-                        print("TEST :", names[int(d[5])])
+                    if (names[int(d[5])]=='person'):
+                        print("PARMETER :", names[int(d[5])])
                         print('w', d[2])
                         print('h', d[3])
 
@@ -266,4 +266,3 @@ def main(opt):
 if __name__ == "__main__":
     opt = parse_opt()
     main(opt)
-
